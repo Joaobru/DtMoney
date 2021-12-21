@@ -1,5 +1,10 @@
+
 import logoImg from '../../assets/logo.svg'
 import { ContainerStyled, ContentStyled } from './styled';
+
+type Props = {
+  handleOpenNewTransactionModal: () => void;
+}
 
 /**
  * @export
@@ -9,13 +14,19 @@ import { ContainerStyled, ContentStyled } from './styled';
  * @description
  * Responsável por conter o componente Header
  */
-export function Header() {
+export function Header({ handleOpenNewTransactionModal }: Props) {
+
   return (
     <ContainerStyled>
       <ContentStyled>
         <img src={logoImg} alt="dt money" />
         
-        <button>Nova transação</button>
+        <button 
+          type="button" 
+          onClick={handleOpenNewTransactionModal}
+        >
+          Nova transação
+        </button>
       </ContentStyled>
     </ContainerStyled>
   )

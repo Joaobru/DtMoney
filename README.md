@@ -1,46 +1,76 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <img style="width:24%" alt="Logo" title="Logo" src="src/assets/logo.svg">
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center"> 
+  O projeto tem o objetivo de cadastrar transações, seja de entrada ou saída,
+  o que pode te ajudar a realizar um planejamento financeiro, identificando os principais
+  gastos e facilitando a decisão do que vai ser cortado.
 
-## Available Scripts
+  <br>
+  <a href="https://leatmeask-4458b.firebaseapp.com/" target="_blank">Acessar o LeatMeask</a>
+</p>
 
-In the project directory, you can run:
+## :computer: Aplicação Web
+  <table>
+    <tr>
+      <th width="100%">
+        DashBoard
+      </th>
+    </tr>
+    <tr>
+      <td>
+          <img alt="DashBoard" title="DashBoard" src="src/assets/dtmoney-example.gif">
+      </td>
+    </tr>
+  </table>
 
-### `yarn start`
+## :bulb: Principais funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Cadastrar Transações.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* Visualizar Transações.
 
-### `yarn test`
+* Visualizar dados gerados pelas Transações cadastradas(Entradas, Saídas e Total).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :wrench: Pré-requisitos
 
-### `yarn build`
+ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Node.js](https://nodejs.org/en/) e um editor para trabalhar com o código como o [VSCode](https://code.visualstudio.com/).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## :rocket: Para rodar a aplicação
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Clone este repositório
+$ git clone https://github.com/Joaobru/Leatmeask.git
 
-### `yarn eject`
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd Leatmeask-master
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Execute o seguinte comando para instalar todas as dependências
+$ npm install ou yarn
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Entre na pasta src/services/firebase.ts e preencha os valores 
+# em vez de usar process.env.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Rode o projeto com o seguinte comando.
+npm run start ou yarn start
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Agora você pode acessar em localhost:3000.
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🛠 Tecnologias
+  * [React](https://pt-br.reactjs.org/);
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  * [TypeScript](https://www.typescriptlang.org/);
+
+  * [MirageJS](https://miragejs.com/);
+
+  * [Styled Components](https://styled-components.com/);
+
+<h2> :book: Licença </h2>
+<p>Lançado em 2021 :book:</p></br>
+<p>Feito por João Paulo Brune Dos Santos. Este projeto está sobre a licença do MIT</p></br>
+<p>Dar uma :star: se este projeto te ajudou</p>

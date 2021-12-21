@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
+import { useTransactionsContext } from '../../hooks/useTransactions';
 
-import TransactionService from '../../services/transactions';
 import { ContainerStyled } from './styled';
 
 /**
@@ -12,21 +11,7 @@ import { ContainerStyled } from './styled';
  * Responsável pela tabela de transações.
  */
 export function TransactionsTable() {
-  /**
-   * @function
-   * @name handleGetTransaction
-   *
-   * @description
-   * Responsável por pegar as transações
-   */
-  async function handleGetTransaction() {
-    const transactions = await TransactionService.get();
-    console.log(transactions, 'dados');
-  }
-  
-  useEffect(() => {
-    handleGetTransaction()
-  },[])
+  const { transactions } = useTransactionsContext()
 
   return (
     <ContainerStyled>
@@ -41,19 +26,23 @@ export function TransactionsTable() {
         </thead>
 
         <tbody>
-          <tr>
-            <td>Desenvolvimento de website</td>
-            <td className="deposit">R$12.000</td>
-            <td>Desenvolvimento</td>
-            <td>20/02/2021</td>
-          </tr>
+          { transactions?.map((transaction) => (
+              <tr key={transaction.id}>
+                <td>{ transaction.title }</td>
+                <td className={ transaction.type }>
+                  { new Intl.NumberFormat('pt-BR', {
+                    style: 'currency',
+                    currency: 'BRL'
+                  }).format(transaction.amount) }
+                </td>
+                <td>{ transaction.category }</td>
+                <td>
+                { new Intl.DateTimeFormat('pt-BR').format(new Date(transaction.createdAt)) }
+                </td>
+              </tr>
+            ))
+          }
 
-          <tr>
-            <td>Aluguel</td>
-            <td className="withdraw">- R$1.100</td>
-            <td>Casa</td>
-            <td>17/02/2021</td>
-          </tr>
         </tbody>
       </table>
     </ContainerStyled>
