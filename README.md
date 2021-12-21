@@ -6,9 +6,6 @@
   O projeto tem o objetivo de cadastrar transações, seja de entrada ou saída,
   o que pode te ajudar a realizar um planejamento financeiro, identificando os principais
   gastos e facilitando a decisão do que vai ser cortado.
-
-  <br>
-  <a href="https://leatmeask-4458b.firebaseapp.com/" target="_blank">Acessar o LeatMeask</a>
 </p>
 
 ## :computer: Aplicação Web
@@ -43,16 +40,13 @@
 ```bash
 
 # Clone este repositório
-$ git clone https://github.com/Joaobru/Leatmeask.git
+$ git clone https://github.com/Joaobru/DtMoney.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd Leatmeask-master
+$ cd DtMoney
 
 # Execute o seguinte comando para instalar todas as dependências
 $ npm install ou yarn
-
-# Entre na pasta src/services/firebase.ts e preencha os valores 
-# em vez de usar process.env.
 
 # Rode o projeto com o seguinte comando.
 npm run start ou yarn start
